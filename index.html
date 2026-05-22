@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#f7fbff" />
+    <title>PeerLift | Student Skill Exchange</title>
+  </head>
+  <body>
+    <div id="root">
+      <div style="font-family: Inter, Arial, sans-serif; padding: 32px; color: #172033;">
+        <h1 style="margin: 0 0 8px;">PeerLift</h1>
+        <p style="margin: 0; color: #64748b;">Loading the student skill exchange platform...</p>
+      </div>
+    </div>
+    <script>
+      window.addEventListener("error", function (event) {
+        var root = document.getElementById("root");
+        if (!root) return;
+        root.innerHTML =
+          '<div style="font-family: Inter, Arial, sans-serif; padding: 32px; color: #172033; line-height: 1.5;">' +
+          '<h1 style="margin: 0 0 8px;">PeerLift could not start</h1>' +
+          '<p style="margin: 0 0 12px; color: #64748b;">Run the app through Vite instead of opening source or dist files directly.</p>' +
+          '<pre style="white-space: pre-wrap; padding: 14px; border-radius: 8px; background: #f1f5f9; color: #b91c1c;">' +
+          String(event.message || "Unknown browser error") +
+          "</pre>" +
+          "</div>";
+      });
+    </script>
+    <script type="module" src="/src/main.jsx"></script>
+  </body>
+</html>

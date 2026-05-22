@@ -1,0 +1,22 @@
+{
+  "name": "peerlift-student-skill-exchange",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "npm run build && node scripts/serve-dist.mjs",
+    "dev:vite": "vite --configLoader runner",
+    "build": "vite build --configLoader runner",
+    "preview": "vite preview --configLoader runner",
+    "serve:dist": "node scripts/serve-dist.mjs"
+  },
+  "dependencies": {
+    "@vitejs/plugin-react": "^5.1.1",
+    "vite": "^7.2.7",
+    "react": "^19.2.3",
+    "react-dom": "^19.2.3",
+    "react-router-dom": "^7.11.0",
+    "lucide-react": "^0.562.0"
+  },
+  "devDependencies": {}
+}
