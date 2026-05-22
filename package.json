@@ -4,7 +4,7 @@
   "private": true,
   "type": "module",
   "scripts": {
-    "dev": "npm run build && node scripts/serve-dist.mjs",
+    "dev": "vite --configLoader runner",
     "dev:vite": "vite --configLoader runner",
     "build": "vite build --configLoader runner",
     "preview": "vite preview --configLoader runner",
@@ -12,11 +12,11 @@
   },
   "dependencies": {
     "@vitejs/plugin-react": "^5.1.1",
-    "vite": "^7.2.7",
+    "axios": "^1.16.1",
+    "lucide-react": "^0.562.0",
     "react": "^19.2.3",
     "react-dom": "^19.2.3",
     "react-router-dom": "^7.11.0",
-    "lucide-react": "^0.562.0"
-  },
-  "devDependencies": {}
+    "vite": "^7.2.7"
+  }
 }

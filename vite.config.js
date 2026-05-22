@@ -11,7 +11,13 @@ export default defineConfig({
     host: "127.0.0.1",
     fs: {
       allow: [projectRoot]
-    }
+    },
+    proxy: {
+      "/api": {
+        target: "http://localhost:5000",
+        changeOrigin: true,
+      },
+    },
   },
   preview: {
     host: "127.0.0.1"
