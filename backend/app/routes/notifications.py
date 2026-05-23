@@ -42,6 +42,8 @@ def unread_count():
 @jwt_required()
 def mark_read(notif_id):
     user = get_current_user()
+    if not user:
+        return error_response("User not found.", "NOT_FOUND", 404)
     try:
         nid = uuid.UUID(notif_id)
     except ValueError:
@@ -72,6 +74,9 @@ def mark_all_read():
 @jwt_required()
 def delete_notification(notif_id):
     user = get_current_user()
+    if not user:
+        return error_response("User not found.", "NOT_FOUND", 404)
+
     try:
         nid = uuid.UUID(notif_id)
     except ValueError:
